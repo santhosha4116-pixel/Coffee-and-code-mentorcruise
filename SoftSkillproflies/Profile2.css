@@ -95,6 +95,8 @@ a {
     display: none;
     font-size: 22px;
     cursor: pointer;
+   color: white;
+
 }
 
 .nav__mobile {
@@ -102,6 +104,7 @@ a {
     flex-direction: column;
     padding: 10px 40px 20px;
     gap: 14px;
+    color: white;
 }
 
 .nav__mobile.open {
