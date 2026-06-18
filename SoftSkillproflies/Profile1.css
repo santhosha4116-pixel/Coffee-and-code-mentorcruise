@@ -29,7 +29,7 @@ body {
 }
 
 img {
-    max-width: 100%;
+    width: 100%;
     display: block;
 }
 
@@ -409,6 +409,7 @@ a {
 .session-card h3 {
     font-size: 16px;
     margin-bottom: 6px;
+    color: black;
 }
 
 .session-card__meta {
