@@ -606,6 +606,7 @@ a {
     background-color: var(--forest);
     padding: 50px 40px;
     text-align: center;
+    
 }
 
 .footer__logo {
@@ -614,13 +615,20 @@ a {
     font-weight: 700;
     margin-bottom: 12px;
 }
+.footer__brand{
 
+}
 .footer__brand p {
     color: var(--text-muted);
     max-width: 500px;
     margin: 0 auto 30px;
 }
-
+.footer__brand img{
+    width: 200px;
+        overflow-clip-margin: none;
+        display: inline-block;
+        justify-content: center;   
+}
 .footer__copy {
     font-size: 13px;
     color: var(--text-muted);
