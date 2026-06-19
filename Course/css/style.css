@@ -1,0 +1,201 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+  background-color: #021f1c;
+  color: white;
+}
+
+/*Navbar*/
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background-color: #021f1c;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 100px;
+  width: auto;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+nav ul li {
+  cursor: pointer;
+}
+
+#navMenubar {
+  display: block !important;
+}
+
+#navMenubar ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  gap: 40px;
+}
+
+/* Side navbar*/
+
+section nav ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 40px;
+  align-items: center;
+}
+
+#sidenavbar {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100vh;
+  background-color: #021f1c;
+  transition: 0.5s;
+  z-index: 1000;
+}
+
+.x {
+  text-align: right;
+  padding: 6px;
+}
+
+.x p {
+  cursor: pointer;
+}
+
+/* Card section*/
+
+main {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.card {
+  width: 320px;
+  min-height: 300px;
+  padding: 25px;
+  border: 2px solid #4cb5a5;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.card h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.card ul {
+  padding-left: 20px;
+}
+
+.card li {
+  margin-bottom: 10px;
+}
+
+button {
+  cursor: pointer;
+  display: block;
+  font-size: 14px;
+  background-color: #5c8d87;
+  color: white;
+  margin-top: 25px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  margin: 30px auto 0;
+}
+
+/*Laptop view */
+
+@media (max-width: 768px) {
+  main {
+    padding: 20px;
+  }
+}
+ 
+/*Mobile view */
+
+@media (max-width: 550px) {
+  header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo img {
+    height: 60px;
+    width: auto;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 450px;
+  }
+
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 320px;
+  }
+
+  .card h2 {
+    font-size: 22px;
+  }
+
+  .menu-icon {
+    display: block;
+    position: absolute;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+  }
+
+  #navMenu {
+    display: none;
+  }
+
+  #sidenavbar {
+    display: block;
+  }
+}
