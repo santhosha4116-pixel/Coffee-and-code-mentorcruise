@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MentorCruise</title>
     <link rel="icon" href="./Assest/images/images.jpeg" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="Course.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -24,37 +24,26 @@
   <body>
     <!--Navbar-->
 
-    <header>
-      <div class="logo"><img src="./Assest/images/mentorcruise-logo.jpeg" alt="Mentorcruise"></div>
-      <div class="menu-icon" id="menuicon">
-        <i class="fa-solid fa-bars" style="color: rgb(241, 245, 244)"></i>
-      </div>
-      <nav id="navMenu">
-        <ul>
-          <li>Home</li>
-          <li>Course</li>
-          <li>About Us</li>
-          <li>Contact Us</li>
-        </ul>
-      </nav>
-
-      <!--Side Navbar-->
-      <section id="sidenavbar">
-        <div class="x">
-          <p id="close-nav">&times;</p>
-        </div>
-        <nav id="navMenubar">
-        <ul>
-          <li>Home</li>
-          <li>Course</li>
-          <li>About Us</li>
-          <li>Contact Us</li>
-        </ul>
-      </nav>
-      </section>
-
-    </header>
-
+<header class="nav">
+    <div class="nav__inner">
+        <a href="#" class="nav__logo">
+            <img src="PROJECT  logo.png">
+        </a>
+        <nav class="nav__links">
+            <a href="#home">Home</a>
+            <a href="#course">Course</a>
+            <a href="#about">About</a>
+            <a href="#contactUs">Contact Us</a>
+        </nav>
+        <div class="nav__hamburger" id="hamburger"><h3>☰</h3></div>
+    </div>
+    <nav class="nav__mobile" id="mobileMenu">
+        <a href="#home">Home</a>
+        <a href="#course">Course</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+</header>
     <!--Main Section-->
 
     <main>
@@ -70,10 +59,9 @@
           <li>UX/UI Design</li>
           <li>AWS & Cloud Management</li>
         </ul>
-
-        <button onclick="window.open('https://www.google.com/', '_blank')">
-          View Course
-        </button>
+        <a href="technicalsoftskill\technical.html"> View Course</a>
+         
+       
       </section>
 
       <!--Soft Skills Card-->
@@ -89,13 +77,18 @@
           <li>Organization & Work Ethic</li>
         </ul>
 
-        <button onclick="window.open('https://www.google.com/', '_blank')">
-          View Course
-        </button>
+        <a href="SoftSkillproflies\Soft Skill page.html"> View Course</a>
+         
       </section>
     </main>
-
-    <script src="./js/script.js"></script>
+    <footer class="footer">
+    <div class="footer__brand">
+        <p class="footer__logo">MentorCruise</p>
+        <p>Your trusted source to find highly-vetted mentors & industry professionals to move your career ahead.</p>
+    </div>
+    <p class="footer__copy">© 2026 MentorCruise. All rights reserved.</p>
+</footer>
+    <script src="Course.js"></script>
 
   </body>
 </html>
