@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MentorCruise - Find a Mentor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="softskills.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <nav class="navbar">
+            <div class="navbar__brand">
+                <img src="images/logo.png" class="navbar__logo" alt="logo">
+                <h1 class="navbar__title">MentorCruise</h1>
+            </div>
+            <ul class="navbar__links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="course.html">Course</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
+            </ul>
+            <button class="hamburger" id="menuBtn">☰</button>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="course.html">Course</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- MAIN LAYOUT -->
+    <div class="container" id="container">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <h2>Course</h2>
+            <div class="filter-group course-filter">
+                <label><input type="checkbox" name="check" value="Full Stack Developer"> Full Stack Developer</label>
+                <label><input type="checkbox" name="check" value="AI and Machine Learning"> AI and Machine Learning</label>
+                <label><input type="checkbox" name="check" value="Python web Developer"> Python web Developer</label>
+                <label><input type="checkbox" name="check" value="UI & UX Design"> UI & UX Design</label>
+                <label><input type="checkbox" name="check" value="AWS and Cloud Management"> AWS and Cloud Management</label>
+            </div>
+
+            <h2>Level</h2>
+            <div class="filter-group level-filter">
+                <label><input type="checkbox" name="check" value="Beginner"> Beginner</label>
+                <label><input type="checkbox" name="check" value="Intermediate"> Intermediate</label>
+                <label><input type="checkbox" name="check" value="Advanced"> Advanced</label>
+            </div>
+
+            <h2>Language</h2>
+            <div class="filter-group language-filter">
+                <label><input type="checkbox" name="check" value="Tamil"> Tamil</label>
+                <label><input type="checkbox" name="check" value="English"> English</label>
+            </div>
+
+        </aside>
+
+        <!-- RIGHT CONTENT -->
+        <section class="content">
+
+            <!-- SEARCH BAR -->
+            <div class="search-wrapper">
+                <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <circle cx="11" cy="11" r="7"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input type="text" id="search" placeholder="Search mentors..." class="search-input">
+            </div>
+
+            <h1 class="section-title">Choose your Mentor</h1>
+
+            <!-- MENTOR CARDS -->
+            <div class="mentor-list">
+
+                <!-- Card 1 -->
+                <div class="mentor-card" data-course="Full Stack Developer" data-level="Intermediate" data-language="Tamil English">
+                    <div class="mentor-card__top">
+                        <div class="mentor-card__img-wrap">
+                            <img src="images/mentor2.png" alt="John Carter" class="mentor-card__img">
+                        </div>
+                        <div class="mentor-card__info">
+                            <h2>John Carter</h2>
+                            <p class="mentor-card__role">Full Stack Developer (Intermediate)</p>
+                            <span class="rating">⭐ 4.9</span>
+                            <p class="mentor-card__desc">Rem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient.</p>
+                            <p class="mentor-card__lang">Speak in Tamil and English</p>
+                            <div class="tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">TailwindCSS</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">Node.js</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mentor-card__bottom">
+                        <div class="price-info">
+                            <p>Starting From</p>
+                            <h3>$180/month</h3>
+                        </div>
+                        <button class="btn-view">View Profile</button>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="mentor-card" data-course="Full Stack Developer" data-level="Advanced" data-language="Tamil English">
+                    <div class="mentor-card__top">
+                        <div class="mentor-card__img-wrap">
+                            <img src="images/mentor1.png" alt="Lauren Simmons" class="mentor-card__img">
+                        </div>
+                        <div class="mentor-card__info">
+                            <h2>Lauren Simmons</h2>
+                            <p class="mentor-card__role">Full Stack Developer (Advanced)</p>
+                            <span class="rating">⭐ 4.9</span>
+                            <p class="mentor-card__desc">Rem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient.</p>
+                            <p class="mentor-card__lang">Speak in Tamil and English</p>
+                            <div class="tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">TailwindCSS</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">Node.js</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mentor-card__bottom">
+                        <div class="price-info">
+                            <p>Starting From</p>
+                            <h3>$180/month</h3>
+                        </div>
+                        <button class="btn-view">View Profile</button>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="mentor-card" data-course="Full Stack Developer" data-level="Beginner" data-language="Tamil English">
+                    <div class="mentor-card__top">
+                        <div class="mentor-card__img-wrap">
+                            <img src="images/mentor3.png" alt="Jason Bell" class="mentor-card__img">
+                        </div>
+                        <div class="mentor-card__info">
+                            <h2>Jason Bell</h2>
+                            <p class="mentor-card__role">Full Stack Developer (Beginner)</p>
+                            <span class="rating">⭐ 4.7</span>
+                            <p class="mentor-card__desc">Rem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient.</p>
+                            <p class="mentor-card__lang">Speak in Tamil and English</p>
+                            <div class="tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">TailwindCSS</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">Node.js</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mentor-card__bottom">
+                        <div class="price-info">
+                            <p>Starting From</p>
+                            <h3>$180/month</h3>
+                        </div>
+                        <button class="btn-view">View Profile</button>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="mentor-card" data-course="AI and Machine Learning" data-level="Beginner" data-language="English Tamil">
+                    <div class="mentor-card__top">
+                        <div class="mentor-card__img-wrap">
+                            <img src="images/mentor4.png" alt="Sarah Williams" class="mentor-card__img">
+                        </div>
+                        <div class="mentor-card__info">
+                            <h2>Sarah Williams</h2>
+                            <p class="mentor-card__role">AI & Machine Learning (Beginner)</p>
+                            <span class="rating">⭐ 4.6</span>
+                            <p class="mentor-card__desc">Industry mentor with practical experience. Helps students master concepts through projects, portfolio building, and career-focused learning.</p>
+                            <p class="mentor-card__lang">Speak in Tamil and English</p>
+                            <div class="tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">NumPy</span>
+                                <span class="tag">Pandas</span>
+                                <span class="tag">Scikit-Learn</span>
+                                <span class="tag">TensorFlow</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mentor-card__bottom">
+                        <div class="price-info">
+                            <p>Starting From</p>
+                            <h3>$1099/month</h3>
+                        </div>
+                        <button class="btn-view">View Profile</button>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="mentor-card" data-course="AI and Machine Learning" data-level="Intermediate" data-language="English">
+                    <div class="mentor-card__top">
+                        <div class="mentor-card__img-wrap">
+                            <img src="images/mentor5.png" alt="Michael Brown" class="mentor-card__img">
+                        </div>
+                        <div class="mentor-card__info">
+                            <h2>Michael Brown</h2>
+                            <p class="mentor-card__role">AI & Machine Learning (Intermediate)</p>
+                            <span class="rating">⭐ 4.9</span>
+                            <p class="mentor-card__desc">Industry mentor with practical experience. Helps students master concepts through projects, portfolio building, and career-focused learning.</p>
+                            <p class="mentor-card__lang">Speak in Tamil and English</p>
+                            <div class="tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">NumPy</span>
+                                <span class="tag">Pandas</span>
+                                <span class="tag">Scikit-Learn</span>
+                                <span class="tag">TensorFlow</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mentor-card__bottom">
+                        <div class="price-info">
+                            <p>Starting From</p>
+                            <h3>$899/month</h3>
+                        </div>
+                        <button class="btn-view">View Profile</button>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="mentor-card" data-course="AI and Machine Learning" data-level="Advanced" data-language="English Tamil">
+                    <div class="mentor-card__top">
+                        <div class="mentor-card__img-wrap">
+                            <img src="images/mentor6.png" alt="Megan Hughes" class="mentor-card__img">
+                        </div>
+                        <div class="mentor-card__info">
+                            <h2>Megan Hughes</h2>
+                            <p class="mentor-card__role">AI & Machine Learning (Advanced)</p>
+                            <span class="rating">⭐ 4.9</span>
+                            <p class="mentor-card__desc">Industry mentor with practical experience. Helps students master concepts through projects, portfolio building, and career-focused learning.</p>
+                            <p class="mentor-card__lang">Speak in Tamil and English</p>
+                            <div class="tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">NumPy</span>
+                                <span class="tag">Pandas</span>
+                                <span class="tag">Scikit-Learn</span>
+                                <span class="tag">TensorFlow</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mentor-card__bottom">
+                        <div class="price-info">
+                            <p>Starting From</p>
+                            <h3>$1099/month</h3>
+                        </div>
+                        <button class="btn-view">View Profile</button>
+                    </div>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="mentor-card" data-course="AWS and Cloud Management" data-level="Advanced" data-language="English Tamil">
+                    <div class="mentor-card__top">
+                        <div class="mentor-card__img-wrap">
+                            <img src="images/mentor7.png" alt="Jack Foster" class="mentor-card__img">
+                        </div>
+                        <div class="mentor-card__info">
+                            <h2>Jack Foster</h2>
+                            <p class="mentor-card__role">AWS & Cloud Management (Advanced)</p>
+                            <span class="rating">⭐ 4.9</span>
+                            <p class="mentor-card__desc">Industry mentor with practical experience. Helps students master concepts through projects, portfolio building, and career-focused learning.</p>
+                            <p class="mentor-card__lang">Speak in Tamil and English</p>
+                            <div class="tags">
+                                <span class="tag">EC2</span>
+                                <span class="tag">S3</span>
+                                <span class="tag">IAM</span>
+                                <span class="tag">VPC</span>
+                                <span class="tag">Cloud Security</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mentor-card__bottom">
+                        <div class="price-info">
+                            <p>Starting From</p>
+                            <h3>$899/month</h3>
+                        </div>
+                        <button class="btn-view">View Profile</button>
+                    </div>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="mentor-card" data-course="AWS and Cloud Management" data-level="Intermediate" data-language="English Tamil">
+                    <div class="mentor-card__top">
+                        <div class="mentor-card__img-wrap">
+                            <img src="images/mentor8.png" alt="Benson" class="mentor-card__img">
+                        </div>
+                        <div class="mentor-card__info">
+                            <h2>Benson</h2>
+                            <p class="mentor-card__role">AWS & Cloud Management (Intermediate)</p>
+                            <span class="rating">⭐ 4.8</span>
+                            <p class="mentor-card__desc">Industry mentor with practical experience. Helps students master concepts through projects, portfolio building, and career-focused learning.</p>
+                            <p class="mentor-card__lang">Speak in Tamil and English</p>
+                            <div class="tags">
+                                <span class="tag">EC2</span>
+                                <span class="tag">S3</span>
+                                <span class="tag">IAM</span>
+                                <span class="tag">VPC</span>
+                                <span class="tag">Cloud Security</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mentor-card__bottom">
+                        <div class="price-info">
+                            <p>Starting From</p>
+                            <h3>$899/month</h3>
+                        </div>
+                        <button class="btn-view">View Profile</button>
+                    </div>
+                </div>
+
+                <!-- Card 9 -->
+                <div class="mentor-card" data-course="AWS and Cloud Management" data-level="Beginner" data-language="English Tamil">
+                    <div class="mentor-card__top">
+                        <div class="mentor-card__img-wrap">
+                            <img src="images/mentor9.png" alt="Stella Brooks" class="mentor-card__img">
+                        </div>
+                        <div class="mentor-card__info">
+                            <h2>Stella Brooks</h2>
+                            <p class="mentor-card__role">AWS & Cloud Management (Beginner)</p>
+                            <span class="rating">⭐ 4.7</span>
+                            <p class="mentor-card__desc">Industry mentor with practical experience. Helps students master concepts through projects, portfolio building, and career-focused learning.</p>
+                            <p class="mentor-card__lang">Speak in Tamil and English</p>
+                            <div class="tags">
+                                <span class="tag">EC2</span>
+                                <span class="tag">S3</span>
+                                <span class="tag">IAM</span>
+                                <span class="tag">VPC</span>
+                                <span class="tag">Cloud Security</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mentor-card__bottom">
+                        <div class="price-info">
+                            <p>Starting From</p>
+                            <h3>$899/month</h3>
+                        </div>
+                        <button class="btn-view">View Profile</button>
+                    </div>
+                </div>
+
+                <!-- Card 10 -->
+                <div class="mentor-card" data-course="UI & UX Design" data-level="Beginner Intermediate Advanced" data-language="English Tamil">
+                    <div class="mentor-card__top">
+                        <div class="mentor-card__img-wrap">
+                            <img src="images/mentor10.png" alt="Daniel White" class="mentor-card__img">
+                        </div>
+                        <div class="mentor-card__info">
+                            <h2>Daniel White</h2>
+                            <p class="mentor-card__role">UX/UI Design (Beginner to Advanced)</p>
+                            <span class="rating">⭐ 4.6</span>
+                            <p class="mentor-card__desc">Industry mentor with practical experience. Helps students master concepts through projects, portfolio building, and career-focused learning.</p>
+                            <p class="mentor-card__lang">Speak English and Tamil</p>
+                            <div class="tags">
+                                <span class="tag">Figma</span>
+                                <span class="tag">Wireframing</span>
+                                <span class="tag">Prototyping</span>
+                                <span class="tag">UX Research</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mentor-card__bottom">
+                        <div class="price-info">
+                            <p>Starting From</p>
+                            <h3>$899/month</h3>
+                        </div>
+                        <button class="btn-view">View Profile</button>
+                    </div>
+                </div>
+
+                <!-- Card 11 -->
+                <div class="mentor-card" data-course="UI & UX Design" data-level="Beginner" data-language="English Tamil">
+                    <div class="mentor-card__top">
+                        <div class="mentor-card__img-wrap">
+                            <img src="images/mentor14.png" alt="Lisa" class="mentor-card__img">
+                        </div>
+                        <div class="mentor-card__info">
+                            <h2>Lisa</h2>
+                            <p class="mentor-card__role">UX/UI Design (Beginner)</p>
+                            <span class="rating">⭐ 4.6</span>
+                            <p class="mentor-card__desc">Industry mentor with practical experience. Helps students master concepts through projects, portfolio building, and career-focused learning.</p>
+                            <p class="mentor-card__lang">Speak English and Tamil</p>
+                            <div class="tags">
+                                <span class="tag">Figma</span>
+                                <span class="tag">Wireframing</span>
+                                <span class="tag">Prototyping</span>
+                                <span class="tag">UX Research</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mentor-card__bottom">
+                        <div class="price-info">
+                            <p>Starting From</p>
+                            <h3>$899/month</h3>
+                        </div>
+                        <button class="btn-view">View Profile</button>
+                    </div>
+                </div>
+
+                <!-- Card 12 -->
+                <div class="mentor-card" data-course="Python web Developer" data-level="Beginner" data-language="English Tamil">
+                    <div class="mentor-card__top">
+                        <div class="mentor-card__img-wrap">
+                            <img src="images/mentor11.png" alt="Tyler Sanders" class="mentor-card__img">
+                        </div>
+                        <div class="mentor-card__info">
+                            <h2>Tyler Sanders</h2>
+                            <p class="mentor-card__role">Python Developer (Beginner)</p>
+                            <span class="rating">⭐ 4.5</span>
+                            <p class="mentor-card__desc">Industry mentor with practical experience. Helps students master concepts through projects, portfolio building, and career-focused learning.</p>
+                            <p class="mentor-card__lang">Speak English and Tamil</p>
+                            <div class="tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">Django</span>
+                                <span class="tag">Flask</span>
+                                <span class="tag">APIs</span>
+                                <span class="tag">Automation</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mentor-card__bottom">
+                        <div class="price-info">
+                            <p>Starting From</p>
+                            <h3>$899/month</h3>
+                        </div>
+                        <button class="btn-view">View Profile</button>
+                    </div>
+                </div>
+
+                <!-- Card 13 -->
+                <div class="mentor-card" data-course="Python web Developer" data-level="Intermediate" data-language="English Tamil">
+                    <div class="mentor-card__top">
+                        <div class="mentor-card__img-wrap">
+                            <img src="images/mentor12.png" alt="Tyler Sanders" class="mentor-card__img">
+                        </div>
+                        <div class="mentor-card__info">
+                            <h2>Tyler Sanders</h2>
+                            <p class="mentor-card__role">Python Developer (Intermediate)</p>
+                            <span class="rating">⭐ 4.6</span>
+                            <p class="mentor-card__desc">Industry mentor with practical experience. Helps students master concepts through projects, portfolio building, and career-focused learning.</p>
+                            <p class="mentor-card__lang">Speak English and Tamil</p>
+                            <div class="tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">Django</span>
+                                <span class="tag">Flask</span>
+                                <span class="tag">APIs</span>
+                                <span class="tag">Automation</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mentor-card__bottom">
+                        <div class="price-info">
+                            <p>Starting From</p>
+                            <h3>$899/month</h3>
+                        </div>
+                        <button class="btn-view">View Profile</button>
+                    </div>
+                </div>
+
+                <!-- Card 14 -->
+                <div class="mentor-card" data-course="Python web Developer" data-level="Advanced" data-language="English Tamil">
+                    <div class="mentor-card__top">
+                        <div class="mentor-card__img-wrap">
+                            <img src="images/mentor13.png" alt="Ron Danny" class="mentor-card__img">
+                        </div>
+                        <div class="mentor-card__info">
+                            <h2>Ron Danny</h2>
+                            <p class="mentor-card__role">Python Developer (Advanced)</p>
+                            <span class="rating">⭐ 4.6</span>
+                            <p class="mentor-card__desc">Industry mentor with practical experience. Helps students master concepts through projects, portfolio building, and career-focused learning.</p>
+                            <p class="mentor-card__lang">Speak English and Tamil</p>
+                            <div class="tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">Django</span>
+                                <span class="tag">Flask</span>
+                                <span class="tag">APIs</span>
+                                <span class="tag">Automation</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mentor-card__bottom">
+                        <div class="price-info">
+                            <p>Starting From</p>
+                            <h3>$899/month</h3>
+                        </div>
+                        <button class="btn-view">View Profile</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <script src="softskills.js"></script>
+</body>
+</html>

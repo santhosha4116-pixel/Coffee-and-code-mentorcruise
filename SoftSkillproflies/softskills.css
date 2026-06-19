@@ -1,0 +1,456 @@
+/* ===========================
+   RESET & BASE
+=========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    min-height: 100vh;
+    padding: 24px 40px;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 40px;
+    font-weight: 700;
+}
+
+.navbar__brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar__logo {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.navbar__title {
+    font-size: 26px;
+    font-weight: 700;
+    color: white;
+}
+
+.navbar__links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    font-size: 17px;
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* MOBILE MENU */
+.mobile-menu {
+    display: none;
+    background-color: #1f4d3f;
+    border-radius: 12px;
+    margin: 0 16px;
+    padding: 16px;
+}
+
+.mobile-menu.open {
+    display: block;
+}
+
+.mobile-menu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-size: 17px;
+}
+
+/* ===========================
+   MAIN CONTAINER (sidebar + content)
+=========================== */
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    max-width: 1400px;
+    margin: 30px auto 0;
+}
+
+/* ===========================
+   SIDEBAR
+=========================== */
+.sidebar {
+    background-color: #1f4d3f;
+    color: white;
+    border-radius: 24px;
+    padding: 30px;
+    width: 280px;
+    min-width: 280px;
+    align-self: start;
+}
+
+.sidebar h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    margin-top: 20px;
+}
+
+.sidebar h2:first-child {
+    margin-top: 0;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+.filter-group label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.filter-group input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    accent-color: white;
+}
+
+/* ===========================
+   RIGHT CONTENT
+=========================== */
+.content {
+    flex: 1;
+}
+
+/* ===========================
+   SEARCH BAR
+=========================== */
+.search-wrapper {
+    position: relative;
+    width: 100%;
+    margin-bottom: 32px;
+}
+
+.search-icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    color: white;
+    stroke: white;
+}
+
+.search-input {
+    width: 100%;
+    background-color: #1f4d3f;
+    color: white;
+    border: 2px solid white;
+    border-radius: 30px;
+    padding: 12px 20px 12px 48px;
+    font-size: 15px;
+    font-family: "Inter", sans-serif;
+}
+
+.search-input::placeholder {
+    color: #d1d5db;
+}
+
+.search-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px white;
+}
+
+/* ===========================
+   SECTION TITLE
+=========================== */
+.section-title {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+/* ===========================
+   MENTOR LIST
+=========================== */
+.mentor-list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+/* ===========================
+   MENTOR CARD
+=========================== */
+.mentor-card {
+    background-color: #E9DFD0;
+    border-radius: 20px;
+    padding: 32px;
+    color: #000;
+}
+
+.mentor-card__top {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+
+.mentor-card__img-wrap {
+    flex-shrink: 0;
+}
+
+.mentor-card__img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid #374151;
+}
+
+.mentor-card__info {
+    flex: 1;
+}
+
+.mentor-card__info h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #7A4A2A;
+    margin-bottom: 6px;
+}
+
+.mentor-card__role {
+    font-size: 20px;
+    color: #8B5E3C;
+    margin-bottom: 10px;
+}
+
+.rating {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background-color: #1F8A70;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-bottom: 14px;
+}
+
+.mentor-card__desc {
+    color: #374151;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.mentor-card__lang {
+    font-weight: 600;
+    color: #7A4A2A;
+    margin-bottom: 16px;
+}
+
+/* TAGS */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag {
+    background-color: #E8CDA6;
+    color: #7A4A2A;
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* CARD BOTTOM */
+.mentor-card__bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    gap: 20px;
+}
+
+.price-info p {
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+}
+
+.price-info h3 {
+    font-size: 40px;
+    font-weight: 300;
+    color: #000;
+}
+
+.btn-view {
+    background-color: #184F46;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 16px 48px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-family: "Inter", sans-serif;
+}
+
+.btn-view:hover {
+    background-color: #123C36;
+}
+
+/* ===========================
+   RESPONSIVE - TABLET (900px)
+=========================== */
+@media (max-width: 900px) {
+
+    body {
+        padding: 16px 20px;
+    }
+
+    .navbar {
+        padding: 14px 20px;
+    }
+
+    .navbar__links {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .container {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .filter-group {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .mentor-card__info h2 {
+        font-size: 26px;
+    }
+
+    .mentor-card__role {
+        font-size: 16px;
+    }
+
+    .price-info h3 {
+        font-size: 30px;
+    }
+}
+
+/* ===========================
+   RESPONSIVE - MOBILE (600px)
+=========================== */
+@media (max-width: 600px) {
+
+    .navbar__title {
+        font-size: 20px;
+    }
+
+    .navbar__logo {
+        width: 36px;
+        height: 36px;
+    }
+
+    .mentor-card {
+        padding: 20px;
+    }
+
+    .mentor-card__top {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mentor-card__img {
+        width: 160px;
+        height: 160px;
+    }
+
+    .mentor-card__info h2 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .mentor-card__role {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .mentor-card__desc {
+        font-size: 14px;
+    }
+
+    .mentor-card__bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 24px;
+    }
+
+    .btn-view {
+        width: 100%;
+        text-align: center;
+        padding: 14px;
+    }
+
+    .section-title {
+        font-size: 26px;
+    }
+
+    .price-info h3 {
+        font-size: 28px;
+    }
+}
