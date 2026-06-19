@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MentorCruise | Contact</title>
+    <link href="./output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="./formValidation.js" defer></script>
+    <script src="./sidenav.js" defer></script>
+</head>
+
+<body class="bg-[#052017] font-poppins">
+
+    <!--Responsive Navbar-->
+
+    <nav class="bg-[#052017] flex items-center justify-between pr-15">
+
+        <img class="w-80 pl-10 p-5" src="./logo/Untitled_2-removebg-preview.png">
+
+        <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="size-6 text-black md:hidden bg-[#FAEFDC] rounded cursor-pointer">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+
+
+        <ul class="text-white flex gap-3 font-bold hidden md:flex">
+            <li>
+                <a class="hover:underline" href="#">Home</a>
+            </li>
+
+            <li>
+                <a class="hover:underline" href="#">Course</a>
+            </li>
+
+            <li>
+                <a class="hover:underline" href="#">About Us</a>
+            </li>
+
+            <li>
+                <a class="hover:underline" href="./contact.html">Contact Us</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!--Side navbar-->
+    <section id="sidenav" class="bg-[#052017] mt-6 fixed z-20 top-0 transition-all duration-500 rounded-2xl pr-10" style="width:50%; height: 50vh; right: -50%;">
+        <div class="text-right p-5">
+            <p id="close-nav" class="inline cursor-pointer bg-[#FAEFDC] pr-2 pl-2 rounded">x</p>
+        </div>
+        <ul class="text-white flex flex-col items-center gap-10 font-bold">
+            <li>
+                <a class="hover:underline" href="#">Home</a>
+            </li>
+
+            <li>
+                <a class="hover:underline" href="#">Course</a>
+            </li>
+
+            <li>
+                <a class="hover:underline" href="#">About Us</a>
+            </li>
+
+            <li>
+                <a class="hover:underline" href="./contact.html">Contact Us</a>
+            </li>
+        </ul>
+    </section>
+
+    <!--Header Section-->
+
+    <main class="min-h-screen bg-[#052017] flex items-center justify-center px-4 py-16">
+
+        <div class="w-full max-w-xl bg-[#1a4c44] border-3 border-[#67c9b2] rounded-2xl px-10 py-10 shadow-2xl">
+
+            <!-- Name -->
+            <div class="mb-5">
+                <label for="firstName" class="block text-white font-bold text-center mb-2">
+                    Name:
+                </label>
+                <input type="text" id="firstName" name="firstName" placeholder=""
+                    class="w-full bg-[#f5f0e8] text-[#1a1a1a] rounded-full px-5 py-3 outline-none focus:ring-2 focus:ring-[#5bb8a0] transition" />
+                <p id="firstNameError" class="text-red-400 text-sm text-center mt-1 hidden">Please enter your first
+                    name.</p>
+            </div>
+
+            <!-- Last Name -->
+            <div class="mb-5">
+                <label for="lastName" class="block text-white font-bold text-center mb-2">
+                    Last Name:
+                </label>
+                <input type="text" id="lastName" name="lastName" placeholder=""
+                    class="w-full bg-[#f5f0e8] text-[#1a1a1a] rounded-full px-5 py-3 outline-none focus:ring-2 focus:ring-[#5bb8a0] transition" />
+                <p id="lastNameError" class="text-red-400 text-sm text-center mt-1 hidden">Please enter your last name.
+                </p>
+            </div>
+
+            <!-- Gmail -->
+            <div class="mb-5">
+                <label for="email" class="block text-white font-bold text-center mb-2">
+                    Gmail:
+                </label>
+                <input type="email" id="email" name="email" placeholder="Your Gmail id"
+                    class="w-full bg-[#f5f0e8] text-[#1a1a1a] placeholder-gray-400 rounded-full px-5 py-3 outline-none focus:ring-2 focus:ring-[#5bb8a0] transition" />
+                <p id="emailError" class="text-red-400 text-sm text-center mt-1 hidden">Please enter a valid Gmail
+                    address.</p>
+            </div>
+
+            <!-- Message -->
+            <div class="mb-8">
+                <label for="message" class="block text-white font-bold text-center mb-2">
+                    Message:
+                </label>
+                <textarea id="message" name="message" rows="5" placeholder="Tell me about yourself"
+                    class="w-full bg-[#f5f0e8] text-[#1a1a1a] placeholder-gray-400 rounded-2xl px-5 py-3 outline-none focus:ring-2 focus:ring-[#5bb8a0] transition resize-none"></textarea>
+                <p id="messageError" class="text-red-400 text-sm text-center mt-1 hidden">Message must be at least 10
+                    characters.</p>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="flex justify-center">
+                <button type="button" id="submitBtn" onclick="validateForm()"
+                    class="bg-[#5bb8a0] hover:bg-[#4aa390] text-white font-bold px-16 py-3 rounded-lg transition-colors duration-200 cursor-pointer">
+                    Submit
+                </button>
+            </div>
+
+            <!-- Success Message (hidden by default) -->
+            <p id="successMsg" class="text-[#5bb8a0] text-center font-bold mt-5 hidden">
+                ✅ Message sent successfully!
+            </p>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>
