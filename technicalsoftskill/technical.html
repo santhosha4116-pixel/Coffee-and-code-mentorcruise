@@ -1,0 +1,1492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./src/output.css" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body class="bg-black text-white min-h-screen p-6 md:p-10">
+    <!--navigation Bar-->
+    <Header>
+    <nav class="font-bold flex items-center justify-between px-4 py-4 md:px-10">
+        <div class="flex items-center">
+            <img src="images/logo.png" class="w-12 h-12 object-contain">
+            <h1 class="text-white text-2xl md:text-3xl font-bold">MentorCruise</h1>
+        </div>
+        <ul class="hidden md:flex gap-6 text-lg">
+            <li><a class="hover:underline" href="index.html">Home</a></li>
+            <li><a class="hover:underline" href="course.html">Course</a></li>
+            <li><a class="hover:underline" href="about_us.html">About Us</a></li>
+            <li><a class="hover:underline" href="contact_us.html">Contact Us</a></li>
+        </ul>
+
+        <!-- Hamburger Button -->
+        <button id="menuBtn" class="md:hidden text-3xl">
+    ☰
+</button>
+
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div
+        id="mobileMenu"
+        class="hidden md:hidden bg-[#1f4d3f] rounded-xl mx-4 p-4"
+    >
+        <ul class="flex flex-col gap-4 text-lg">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="course.html">Course</a></li>
+            <li><a href="about_us.html">About Us</a></li>
+            <li><a href="contact_us.html">Contact Us</a></li>
+        </ul>
+    </div>
+</header>
+   <div class="flex flex-col lg:flex-row gap-6 lg:gap-10 max-w-7xl mx-auto" id="container">
+
+    <!-- Sidebar -->
+    <section class="bg-[#1f4d3f] text-white rounded-3xl p-6 md:p-8 w-full lg:w-[320px] lg:min-w-[320px] self-start">
+        <h2 class="text-2xl font-bold mb-4">Course</h2>
+            <div class="space-y-4 mb-8 course-filter">
+                <label class="flex items-center gap-3 cursor-pointer">
+                <input type="checkbox" name="check" value="Full Stack Developer" class="w-4 h-4 rounded-sm border-2 border-white bg-transparent accent-white">
+                <span>Full Stack Developer</span></label>
+                <label class="flex items-center gap-3 cursor-pointer">
+                <input type="checkbox" name="check" value="AI and Machine Learning"class="w-4 h-4 rounded-sm border-2 border-white bg-transparent accent-white">
+                <span>AI and Machine Learning</span></label>
+                <label class="flex items-center gap-3 cursor-pointer">
+                <input type="checkbox" name="check" value="Python web Developer" class="w-4 h-4 rounded-sm border-2 border-white bg-transparent accent-white">
+                <span>Python web Developer</span></label>
+                <label class="flex items-center gap-3 cursor-pointer">
+                <input type="checkbox" name="check" value="UI & UX Design" class="w-4 h-4 rounded-sm border-2 border-white bg-transparent accent-white">
+                <span>UI & UX Design</span></label>
+                <label class="flex items-center gap-3 cursor-pointer">
+                <input type="checkbox" name="check" value="AWS and Cloud Management" class="w-4 h-4 rounded-sm border-2 border-white bg-transparent accent-white">
+                <span>AWS and Cloud Management</span></label>
+            </div>
+            <h2 class="text-2xl font-bold mb-4">Level</h2>
+            <div class="space-y-4 mb-8 level-filter">
+                <label class="flex items-center gap-3 cursor-pointer">
+                <input type="checkbox" name="check" value="Beginner" class="w-4 h-4 rounded-sm border-2 border-white bg-transparent accent-white">
+                <span>Beginner</span></label>
+                <label class="flex items-center gap-3 cursor-pointer">
+                <input type="checkbox" name="check" value="Intermediate" class="w-4 h-4 rounded-sm border-2 border-white bg-transparent accent-white">
+                <span>Intermediate</span></label>
+                <label class="flex items-center gap-3 cursor-pointer">
+                <input type="checkbox" name="check" value="Advanced" class="w-4 h-4 rounded-sm border-2 border-white bg-transparent accent-white">
+                <span>Advanced</span></label>
+            </div>
+            <h2 class="text-2xl font-bold mb-4">Language</h2>
+            <div class="space-y-4 mb-8 language-filter">
+                <label class="flex items-center gap-3 cursor-pointer">
+                <input type="checkbox" name="check" value="Tamil" class="w-4 h-4 rounded-sm border-2 border-white bg-transparent accent-white">
+                <span>Tamil</span></label>
+                <label class="flex items-center gap-3 cursor-pointer">
+                <input type="checkbox" name="check" value="English" class="w-4 h-4 rounded-sm border-2 border-white bg-transparent accent-white">
+                <span>English</span></label>
+            </div>
+
+    </section>
+
+    <!-- Right Content -->
+    <section class="flex-1">
+
+        <!-- Search Bar -->
+        <div class="relative w-full mb-8">
+
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-white"
+                 fill="none"
+                 viewBox="0 0 24 24"
+                 stroke="currentColor">
+                <circle cx="11" cy="11" r="7"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+
+            <input type="text" id="search" placeholder="Search mentors..." class="w-full bg-[#1f4d3f] text-white placeholder:text-gray-300 border-2 border-white rounded-full py-3 pl-12 pr-5 focus:outline-none focus:ring-2 focus:ring-white"
+            />
+    </div>
+   <!--mentor grid-->
+    <h1 class="text-4xl font-bold text-center mb-8">
+    Choose your Mentor
+</h1>
+
+<!-- Mentor Cards -->
+<div class="space-y-8">
+
+    <!-- Mentor Card -->
+    <div class="bg-[#E9DFD0] rounded-2xl p-8 mentor-card" data-course="Full Stack Developer"
+     data-level="Intermediate"
+     data-language="Tamil English">
+
+        <div class="flex flex-col md:flex-row gap-6">
+            <div class="shrink-0">
+                <img
+                    src="images/mentor2.png" alt="w-full max-w-[220px] h-auto aspect-square object-cover rounded-xl border-2 border-gray-700 mx-auto">
+            </div>
+            <div class="flex-1">
+
+                <h2 class="text-2xl md:text-4xl font-bold text-[#7A4A2A]">
+                    John Carter
+                </h2>
+
+                <p class="text-2xl text-[#8B5E3C]">
+                    Full Stack Developer(Intermediate)
+                </p>
+                <div class="inline-flex items-center gap-1 bg-[#1F8A70] text-white px-3 py-1 rounded-lg mt-3">
+                    ⭐ <span>4.9</span>
+                </div>
+
+                <p class="text-gray-800 mt-4 leading-relaxed">
+                    Rem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Aenean commodo ligula eget dolor. Aenean massa.
+                    Cum sociis natoque penatibus et magnis dis parturient.
+                </p>
+
+                <p class="font-semibold mt-3 text-[#7A4A2A]">
+                    Speak in Tamil and English
+                </p>
+
+                <div class="flex flex-wrap gap-3 mt-5">
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        HTML
+                    </span>
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        TailwindCSS
+                    </span>
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        CSS
+                    </span>
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        JavaScript
+                    </span>
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        Node.js
+                    </span>
+
+                </div>
+            </div>
+        </div>
+        <div class="mt-12 flex flex-col md:flex-row justify-between items-center gap-6">
+
+            <div class="text-black">
+                <p class="font-semibold text-lg">
+                    Starting From
+                </p>
+
+                <h3 class="text-5xl font-light">
+                    $180/month
+                </h3>
+            </div>
+
+            <button class="bg-[#184F46] hover:bg-[#123C36] text-white font-semibold px-12 py-4 rounded-xl transition">
+                View Profile
+            </button>
+
+        </div>
+    </div>
+    <div class="bg-[#E9DFD0] rounded-2xl p-8 mentor-card" data-course="Full Stack Developer"
+     data-level="Advanced"
+     data-language="Tamil English">
+
+        <div class="flex flex-col md:flex-row gap-6">
+            <div class="shrink-0">
+                <img
+                    src="images/mentor1.png"
+                    alt="mentor image"
+                    class="w-[220px] h-[220px] object-cover rounded-xl border-2 border-gray-700">
+            </div>
+            <div class="flex-1">
+
+                <h2 class="text-2xl md:text-4xl font-bold text-[#7A4A2A]">
+                    Lauren Simmons
+                </h2>
+
+                <p class="text-2xl text-[#8B5E3C]">
+                    Full Stack Developer(Advanced)
+                </p>
+                <div class="inline-flex items-center gap-1 bg-[#1F8A70] text-white px-3 py-1 rounded-lg mt-3">
+                    ⭐ <span>4.9</span>
+                </div>
+
+                <p class="text-gray-800 mt-4 leading-relaxed">
+                    Rem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Aenean commodo ligula eget dolor. Aenean massa.
+                    Cum sociis natoque penatibus et magnis dis parturient.
+                </p>
+
+                <p class="font-semibold mt-3 text-[#7A4A2A]">
+                    Speak in Tamil and English
+                </p>
+
+                <div class="flex flex-wrap gap-3 mt-5">
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        HTML
+                    </span>
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        TailwindCSS
+                    </span>
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        CSS
+                    </span>
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        JavaScript
+                    </span>
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        Node.js
+                    </span>
+
+                </div>
+            </div>
+        </div>
+        <div class="mt-12 flex flex-col md:flex-row justify-between items-center gap-6">
+
+            <div class="text-black">
+                <p class="font-semibold text-lg">
+                    Starting From
+                </p>
+
+                <h3 class="text-5xl font-light">
+                    $180/month
+                </h3>
+            </div>
+
+            <button class="bg-[#184F46] hover:bg-[#123C36] text-white font-semibold px-12 py-4 rounded-xl transition">
+                View Profile
+            </button>
+
+        </div>
+    </div>
+    <div class="bg-[#E9DFD0] rounded-2xl p-8 mentor-card" data-course="Full Stack Developer"
+     data-level="Beginner"
+     data-language="Tamil English">
+
+        <div class="flex flex-col md:flex-row gap-6">
+            <div class="shrink-0">
+                <img
+                    src="images/mentor3.png" alt="mentor image" class="w-full max-w-[220px] h-auto aspect-square object-cover rounded-xl border-2 border-gray-700 mx-auto">
+            </div>
+            <div class="flex-1">
+
+                <h2 class="text-2xl md:text-4xl font-bold text-[#7A4A2A]">
+                    Jason Bell
+                </h2>
+
+                <p class="text-2xl text-[#8B5E3C]">
+                    Full Stack Developer(Beginner)
+                </p>
+                <div class="inline-flex items-center gap-1 bg-[#1F8A70] text-white px-3 py-1 rounded-lg mt-3">
+                    ⭐ <span>4.7</span>
+                </div>
+
+                <p class="text-gray-800 mt-4 leading-relaxed">
+                    Rem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Aenean commodo ligula eget dolor. Aenean massa.
+                    Cum sociis natoque penatibus et magnis dis parturient.
+                </p>
+
+                <p class="font-semibold mt-3 text-[#7A4A2A]">
+                    Speak in Tamil and English
+                </p>
+
+                <div class="flex flex-wrap gap-3 mt-5">
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        HTML
+                    </span>
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        TailwindCSS
+                    </span>
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        CSS
+                    </span>
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        JavaScript
+                    </span>
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        Node.js
+                    </span>
+
+                </div>
+            </div>
+        </div>
+        <div class="mt-12 flex flex-col md:flex-row justify-between items-center gap-6">
+
+            <div class="text-black">
+                <p class="font-semibold text-lg">
+                    Starting From
+                </p>
+
+                <h3 class="text-5xl font-light">
+                    $180/month
+                </h3>
+            </div>
+
+            <button class="bg-[#184F46] hover:bg-[#123C36] text-white font-semibold px-12 py-4 rounded-xl transition">
+                View Profile
+            </button>
+
+        </div>
+    </div>
+    <div class="bg-[#E9DFD0] rounded-2xl p-8 mentor-card <div class="bg-[#E9DFD0] rounded-2xl p-8 mentor-card"
+     data-course="AI and Machine Learning"
+     data-level="Beginner"
+     data-language="English and  Tamil">
+
+        <div class="flex flex-col md:flex-row gap-6">
+            <div class="shrink-0">
+                <img
+                    src="images/mentor4.png"
+                    alt="mentor image"
+                    class="w-full max-w-[220px] h-auto aspect-square object-cover rounded-xl border-2 border-gray-700 mx-auto">
+            </div>
+            <div class="flex-1">
+
+                <h2 class="text-2xl md:text-4xl font-bold text-[#7A4A2A]">Sarah Williams</h2>
+
+                <p class="text-2xl text-[#8B5E3C]">AI & Machine Learning (Beginner)</p>
+                <div class="inline-flex items-center gap-1 bg-[#1F8A70] text-white px-3 py-1 rounded-lg mt-3">
+                    ⭐ <span>4.6</span>
+                </div>
+
+                <p class="text-gray-800 mt-4 leading-relaxed">
+                     Industry mentor with practical experience. Helps students master concepts through
+projects, portfolio building, and career-focused learning. Suitable for learners aiming to gain
+job-ready skills.
+S
+                </p>
+
+                <p class="font-semibold mt-3 text-[#7A4A2A]">
+                    Speak in Tamil and english
+                </p>
+
+                <div class="flex flex-wrap gap-3 mt-5">
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        Python
+                    </span>
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        NumPy
+                    </span>
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        Pandas
+                    </span>
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                            Scikit-Learn
+                    </span>
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        TensorFlow
+                    </span>
+
+                </div>
+            </div>
+        </div>
+        <div class="mt-12 flex flex-col md:flex-row justify-between items-center gap-6">
+
+            <div class="text-black">
+                <p class="font-semibold text-lg">
+                    Starting From
+                </p>
+
+                <h3 class="text-5xl font-light">
+                    $1099/month
+                </h3>
+            </div>
+
+            <button class="bg-[#184F46] hover:bg-[#123C36] text-white font-semibold px-12 py-4 rounded-xl transition">
+                View Profile
+            </button>
+
+        </div>
+
+    </div>
+    
+<div class="bg-[#E9DFD0] rounded-2xl p-8 mentor-card" 
+     data-course="AI and Machine Learning"
+     data-level="Intermediate"
+     data-language="English">
+
+        <div class="flex flex-col md:flex-row gap-6">
+            <div class="shrink-0">
+                <img
+                    src="images/mentor5.png"
+                    alt="mentor image"
+                    class="w-[220px] h-[220px] object-cover rounded-xl border-2 border-gray-700">
+            </div>
+            <div class="flex-1">
+
+                <h2 class="text-2xl md:text-4xl font-bold text-[#7A4A2A]">Michhael Brown</h2>
+
+                <p class="text-2xl text-[#8B5E3C]">AI & Machine Learning (Intermediate)</p>
+                <div class="inline-flex items-center gap-1 bg-[#1F8A70] text-white px-3 py-1 rounded-lg mt-3">
+                    ⭐ <span>4.9</span>
+                </div>
+
+                <p class="text-gray-800 mt-4 leading-relaxed">
+                     Industry mentor with practical experience. Helps students master concepts through
+projects, portfolio building, and career-focused learning. Suitable for learners aiming to gain
+job-ready skills.
+S
+                </p>
+
+                <p class="font-semibold mt-3 text-[#7A4A2A]">
+                    Speak in tamil and English
+                </p>
+
+                <div class="flex flex-wrap gap-3 mt-5">
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        Python
+                    </span>
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        NumPy
+                    </span>
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        Pandas
+                    </span>
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                            Scikit-Learn
+                    </span>
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        TensorFlow
+                    </span>
+
+                </div>
+            </div>
+        </div>
+        <div class="mt-12 flex flex-col md:flex-row justify-between items-center gap-6">
+
+            <div class="text-black">
+                <p class="font-semibold text-lg">
+                    Starting From
+                </p>
+
+                <h3 class="text-5xl font-light">
+                    $899/month
+                </h3>
+            </div>
+
+            <button class="bg-[#184F46] hover:bg-[#123C36] text-white font-semibold px-12 py-4 rounded-xl transition">
+                View Profile
+            </button>
+
+        </div>
+
+    </div>
+    <div class="bg-[#E9DFD0] rounded-2xl p-8 mentor-card"
+     data-course="AI and Machine Learning"
+     data-level="Advanced"
+     data-language="English and Tamil">
+
+        <div class="flex flex-col md:flex-row gap-6">
+            <div class="shrink-0">
+                <img
+                    src="images/mentor6.png"
+                    alt="mentor image"
+                    class="w-full max-w-[220px] h-auto aspect-square object-cover rounded-xl border-2 border-gray-700 mx-auto">
+            </div>
+            <div class="flex-1">
+
+                <h2 class="text-2xl md:text-4xl font-bold text-[#7A4A2A]"> Megan Hughes</h2>
+
+                <p class="text-2xl text-[#8B5E3C]">AI & Machine Learning (Beginner)</p>
+                <div class="inline-flex items-center gap-1 bg-[#1F8A70] text-white px-3 py-1 rounded-lg mt-3">
+                    ⭐ <span>4.9</span>
+                </div>
+
+                <p class="text-gray-800 mt-4 leading-relaxed">
+                     Industry mentor with practical experience. Helps students master concepts through
+projects, portfolio building, and career-focused learning. Suitable for learners aiming to gain
+job-ready skills.
+S
+                </p>
+
+                <p class="font-semibold mt-3 text-[#7A4A2A]">
+                    Speak in Tamil and english
+                </p>
+
+                <div class="flex flex-wrap gap-3 mt-5">
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        Python
+                    </span>
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        NumPy
+                    </span>
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        Pandas
+                    </span>
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                            Scikit-Learn
+                    </span>
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        TensorFlow
+                    </span>
+
+                </div>
+            </div>
+        </div>
+        <div class="mt-12 flex flex-col md:flex-row justify-between items-center gap-6">
+
+            <div class="text-black">
+                <p class="font-semibold text-lg">
+                    Starting From
+                </p>
+
+                <h3 class="text-5xl font-light">
+                    $1099/month
+                </h3>
+            </div>
+
+            <button class="bg-[#184F46] hover:bg-[#123C36] text-white font-semibold px-12 py-4 rounded-xl transition">
+                View Profile
+            </button>
+
+        </div>
+
+    </div>
+<div class="bg-[#E9DFD0] rounded-2xl p-8 mentor-card"
+     data-course="AI and Machine Learning"
+     data-level="Advancedr"
+     data-language="English">
+
+        <div class="flex flex-col md:flex-row gap-6">
+            <div class="shrink-0">
+                <img
+                    src="images/mentor6.png"
+                    alt="mentor image"
+                    class="w-full max-w-[220px] h-auto aspect-square object-cover rounded-xl border-2 border-gray-700 mx-auto">
+            </div>
+            <div class="flex-1 mentor-card">
+
+                <h2 class="text-2xl md:text-4xl font-bold text-[#7A4A2A]">Andrew Price</h2>
+
+                <p class="text-2xl text-[#8B5E3C]">AI & Machine Learning (Advanced)</p>
+                <div class="inline-flex items-center gap-1 bg-[#1F8A70] text-white px-3 py-1 rounded-lg mt-3">
+                    ⭐ <span>4.9</span>
+                </div>
+
+                <p class="text-gray-800 mt-4 leading-relaxed">
+                     Industry mentor with practical experience. Helps students master concepts through
+projects, portfolio building, and career-focused learning. Suitable for learners aiming to gain
+job-ready skills.
+S
+                </p>
+
+                <p class="font-semibold mt-3 text-[#7A4A2A]">
+                    Speak in tamil and english
+                </p>
+
+                <div class="flex flex-wrap gap-3 mt-5">
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        Python
+                    </span>
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        NumPy
+                    </span>
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        Pandas
+                    </span>
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                            Scikit-Learn
+                    </span>
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        TensorFlow
+                    </span>
+
+                </div>
+            </div>
+        </div>
+        <div class="mt-12 flex flex-col md:flex-row justify-between items-center gap-6">
+
+            <div class="text-black">
+                <p class="font-semibold text-lg">
+                    Starting From
+                </p>
+
+                <h3 class="text-5xl font-light">
+                    $899/month
+                </h3>
+            </div>
+
+            <button class="bg-[#184F46] hover:bg-[#123C36] text-white font-semibold px-12 py-4 rounded-xl transition">
+                View Profile
+            </button>
+
+        </div>
+
+    </div>
+    <div class="bg-[#E9DFD0] rounded-2xl p-8 mentor-card" data-course="AWS and Cloud Management"
+     data-level="Advanced"
+     data-language="English and Tamil">
+
+        <div class="flex flex-col md:flex-row gap-6">
+            <div class="shrink-0">
+                <img
+                    src="images/mentor7.png"
+                    alt="mentor image"
+                    class="w-full max-w-[220px] h-auto aspect-square object-cover rounded-xl border-2 border-gray-700 mx-auto">
+            </div>
+            <div class="flex-1">
+
+                <h2 class="text-2xl md:text-4xl font-bold text-[#7A4A2A]">Jack Foster</h2>
+
+                <p class="text-2xl text-[#8B5E3C]">AWS & Cloud Management (Advanced)</p>
+                <div class="inline-flex items-center gap-1 bg-[#1F8A70] text-white px-3 py-1 rounded-lg mt-3">
+                    ⭐ <span>4.9</span>
+                </div>
+
+                <p class="text-gray-800 mt-4 leading-relaxed">
+                     Industry mentor with practical experience. Helps students master concepts through
+projects, portfolio building, and career-focused learning. Suitable for learners aiming to gain
+job-ready skills.
+S
+                </p>
+
+                <p class="font-semibold mt-3 text-[#7A4A2A]">
+                    Speak in Tamil and english
+                </p>
+
+                <div class="flex flex-wrap gap-3 mt-5">
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        EC2
+                    </span>
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                       S3
+                    </span>
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        IAM
+                    </span>
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                         VPC   
+                    </span>
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        Cloud Security
+                    </span>
+
+                </div>
+            </div>
+        </div>
+        <div class="mt-12 flex flex-col md:flex-row justify-between items-center gap-6">
+
+            <div class="text-black">
+                <p class="font-semibold text-lg">
+                    Starting From
+                </p>
+
+                <h3 class="text-5xl font-light">
+                    $899/month
+                </h3>
+            </div>
+
+            <button class="bg-[#184F46] hover:bg-[#123C36] text-white font-semibold px-12 py-4 rounded-xl transition">
+                View Profile
+            </button>
+
+        </div>
+
+    </div>
+    <div class="bg-[#E9DFD0] rounded-2xl p-8 mentor-card"data-course="AWS and Cloud Management"
+     data-level="Intermediate"
+     data-language="English and Tamil">
+
+        <div class="flex flex-col md:flex-row gap-6">
+            <div class="shrink-0">
+                <img
+                    src="images/mentor8.png"
+                    alt="mentor image"
+                    class="w-full max-w-[220px] h-auto aspect-square object-cover rounded-xl border-2 border-gray-700 mx-auto">
+            </div>        
+    <div class="flex-1">
+
+                <h2 class="text-2xl md:text-4xl font-bold text-[#7A4A2A]">Benson</h2>
+
+                <p class="text-2xl text-[#8B5E3C]">AWS & Cloud Management (Intermediate)</p>
+                <div class="inline-flex items-center gap-1 bg-[#1F8A70] text-white px-3 py-1 rounded-lg mt-3">
+                    ⭐ <span>4.8</span>
+                </div>
+
+                <p class="text-gray-800 mt-4 leading-relaxed">
+                     Industry mentor with practical experience. Helps students master concepts through
+projects, portfolio building, and career-focused learning. Suitable for learners aiming to gain
+job-ready skills.
+S
+                </p>
+
+                <p class="font-semibold mt-3 text-[#7A4A2A]">
+                    Speak in Tamil and english
+                </p>
+
+                <div class="flex flex-wrap gap-3 mt-5">
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        EC2
+                    </span>
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                       S3
+                    </span>
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        IAM
+                    </span>
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                         VPC   
+                    </span>
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        Cloud Security
+                    </span>
+
+                </div>
+            </div>
+        </div>
+        <div class="mt-12 flex flex-col md:flex-row justify-between items-center gap-6">
+
+            <div class="text-black">
+                <p class="font-semibold text-lg">
+                    Starting From
+                </p>
+
+                <h3 class="text-5xl font-light">
+                    $899/month
+                </h3>
+            </div>
+
+            <button class="bg-[#184F46] hover:bg-[#123C36] text-white font-semibold px-12 py-4 rounded-xl transition">
+                View Profile
+            </button>
+
+        </div>
+
+    </div>
+     <div class="bg-[#E9DFD0] rounded-2xl p-8 mentor-card" data-course="AWS and Cloud Management"
+     data-level="Beginner"
+     data-language="English and Tamil">
+
+        <div class="flex flex-col md:flex-row gap-6">
+            <div class="shrink-0">
+                <img
+                    src="images/mentor9.png"
+                    alt="mentor image"
+                    class="w-full max-w-[220px] h-auto aspect-square object-cover rounded-xl border-2 border-gray-700 mx-auto">
+            </div>        
+    <div class="flex-1">
+
+                <h2 class="text-2xl md:text-4xl font-bold text-[#7A4A2A]">Stella Brooks</h2>
+
+                <p class="text-2xl text-[#8B5E3C]">AWS & Cloud Management (Beginner)</p>
+                <div class="inline-flex items-center gap-1 bg-[#1F8A70] text-white px-3 py-1 rounded-lg mt-3">
+                    ⭐ <span>4.7</span>
+                </div>
+
+                <p class="text-gray-800 mt-4 leading-relaxed">
+                     Industry mentor with practical experience. Helps students master concepts through
+projects, portfolio building, and career-focused learning. Suitable for learners aiming to gain
+job-ready skills.
+S
+                </p>
+
+                <p class="font-semibold mt-3 text-[#7A4A2A]">
+                    Speak in Tamil and english
+                </p>
+
+                <div class="flex flex-wrap gap-3 mt-5">
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        EC2
+                    </span>
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                       S3
+                    </span>
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        IAM
+                    </span>
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                         VPC   
+                    </span>
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        Cloud Security
+                    </span>
+
+                </div>
+            </div>
+        </div>
+        <div class="mt-12 flex flex-col md:flex-row justify-between items-center gap-6">
+
+            <div class="text-black">
+                <p class="font-semibold text-lg">
+                    Starting From
+                </p>
+
+                <h3 class="text-5xl font-light">
+                    $899/month
+                </h3>
+            </div>
+
+            <button class="bg-[#184F46] hover:bg-[#123C36] text-white font-semibold px-12 py-4 rounded-xl transition">
+                View Profile
+            </button>
+
+        </div>
+
+    </div>
+    
+        
+    <div class="bg-[#E9DFD0] rounded-2xl p-8 mentor-card" data-course="UI & UX Design"
+     data-level="Beginner Intermediate Advanced"
+     data-language="English and Tamil">
+
+        <div class="flex flex-col md:flex-row gap-6">
+            <div class="shrink-0">
+                <img
+                    src="images/mentor10.png"
+                    alt="mentor image"
+                    class="w-full max-w-[220px] h-auto aspect-square object-cover rounded-xl border-2 border-gray-700 mx-auto">
+            </div>
+            <div class="flex-1">
+
+                <h2 class="text-2xl md:text-4xl font-bold text-[#7A4A2A]">
+                    Daniel White
+                </h2>
+
+                <p class="text-2xl text-[#8B5E3C]">
+                     UX/UI Design (Beginner to Advanced)
+                </p>
+                <div class="inline-flex items-center gap-1 bg-[#1F8A70] text-white px-3 py-1 rounded-lg mt-3">
+                    ⭐ <span>4.6</span>
+                </div>
+
+                <p class="text-gray-800 mt-4 leading-relaxed">
+                     Industry mentor with practical experience. Helps students master concepts through
+projects, portfolio building, and career-focused learning. Suitable for learners aiming to gain
+job-ready skills.
+                </p>
+
+                <p class="font-semibold mt-3 text-[#7A4A2A]">
+                    Speak English
+                </p>
+
+                <div class="flex flex-wrap gap-3 mt-5">
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        Figma
+                    </span>
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        Wireframing
+                    </span>
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        Prototyping
+                    </span>
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        UX Researcher
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="mt-12 flex flex-col md:flex-row justify-between items-center gap-6">
+
+            <div class="text-black">
+                <p class="font-semibold text-lg">
+                    Starting From
+                </p>
+
+                <h3 class="text-5xl font-light">
+                    $899/month
+                </h3>
+            </div>
+
+            <button class="bg-[#184F46] hover:bg-[#123C36] text-white font-semibold px-12 py-4 rounded-xl transition">
+                View Profile
+            </button>
+
+        </div>
+
+    </div>
+    <div class="bg-[#E9DFD0] rounded-2xl p-8 mentor-card" data-course="UI & UX Design"
+     data-level="Beginner"
+     data-language="English and Tamil">
+
+        <div class="flex flex-col md:flex-row gap-6">
+            <div class="shrink-0">
+                <img
+                    src="images/mentor14.png"
+                    alt="mentor image"
+                    class="w-full max-w-[220px] h-auto aspect-square object-cover rounded-xl border-2 border-gray-700 mx-auto">
+            </div>
+            <div class="flex-1">
+
+                <h2 class="text-2xl md:text-4xl font-bold text-[#7A4A2A]">
+                    Lisa
+                </h2>
+
+                <p class="text-2xl text-[#8B5E3C]">
+                     UX/UI Design (Beginner)
+                </p>
+                <div class="inline-flex items-center gap-1 bg-[#1F8A70] text-white px-3 py-1 rounded-lg mt-3">
+                    ⭐ <span>4.6</span>
+                </div>
+
+                <p class="text-gray-800 mt-4 leading-relaxed">
+                     Industry mentor with practical experience. Helps students master concepts through
+projects, portfolio building, and career-focused learning. Suitable for learners aiming to gain
+job-ready skills.
+                </p>
+
+                <p class="font-semibold mt-3 text-[#7A4A2A]">
+                    Speak English and Tamil
+                </p>
+
+                <div class="flex flex-wrap gap-3 mt-5">
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        Figma
+                    </span>
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        Wireframing
+                    </span>
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        Prototyping
+                    </span>
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        UX Researcher
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="mt-12 flex flex-col md:flex-row justify-between items-center gap-6">
+
+            <div class="text-black">
+                <p class="font-semibold text-lg">
+                    Starting From
+                </p>
+
+                <h3 class="text-5xl font-light">
+                    $899/month
+                </h3>
+            </div>
+
+            <button class="bg-[#184F46] hover:bg-[#123C36] text-white font-semibold px-12 py-4 rounded-xl transition">
+                View Profile
+            </button>
+
+        </div>
+
+    </div>
+    <div class="bg-[#E9DFD0] rounded-2xl p-8 mentor-card" data-course="UI & UX Design"
+     data-level="Advanced"
+     data-language="English and Tamil">
+
+        <div class="flex flex-col md:flex-row gap-6">
+            <div class="shrink-0">
+                <img
+                    src="images/mentor10.png"
+                    alt="mentor image"
+                    class="w-full max-w-[220px] h-auto aspect-square object-cover rounded-xl border-2 border-gray-700 mx-auto">
+            </div>
+            <div class="flex-1">
+
+                <h2 class="text-2xl md:text-4xl font-bold text-[#7A4A2A]">
+                    Daniel White
+                </h2>
+
+                <p class="text-2xl text-[#8B5E3C]">
+                     UX/UI Design (Advanced)
+                </p>
+                <div class="inline-flex items-center gap-1 bg-[#1F8A70] text-white px-3 py-1 rounded-lg mt-3">
+                    ⭐ <span>4.6</span>
+                </div>
+
+                <p class="text-gray-800 mt-4 leading-relaxed">
+                     Industry mentor with practical experience. Helps students master concepts through
+projects, portfolio building, and career-focused learning. Suitable for learners aiming to gain
+job-ready skills.
+                </p>
+
+                <p class="font-semibold mt-3 text-[#7A4A2A]">
+                    Speak English
+                </p>
+
+                <div class="flex flex-wrap gap-3 mt-5">
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        Figma
+                    </span>
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        Wireframing
+                    </span>
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        Prototyping
+                    </span>
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        UX Researcher
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="mt-12 flex flex-col md:flex-row justify-between items-center gap-6">
+
+            <div class="text-black">
+                <p class="font-semibold text-lg">
+                    Starting From
+                </p>
+
+                <h3 class="text-5xl font-light">
+                    $899/month
+                </h3>
+            </div>
+
+            <button class="bg-[#184F46] hover:bg-[#123C36] text-white font-semibold px-12 py-4 rounded-xl transition">
+                View Profile
+            </button>
+
+        </div>
+
+    </div>
+    <div class="bg-[#E9DFD0] rounded-2xl p-8 mentor-card" data-course="UI & UX Design"
+     data-level="Intermediate"
+     data-language="English and Tamil">
+
+        <div class="flex flex-col md:flex-row gap-6">
+            <div class="shrink-0">
+                <img
+                    src="images/mentor14.png"
+                    alt="mentor image"
+                    class="w-full max-w-[220px] h-auto aspect-square object-cover rounded-xl border-2 border-gray-700 mx-auto">
+            </div>
+            <div class="flex-1">
+
+                <h2 class="text-2xl md:text-4xl font-bold text-[#7A4A2A]">
+                    Bright
+                </h2>
+
+                <p class="text-2xl text-[#8B5E3C]">
+                     UX/UI Design (Intermediate)
+                </p>
+                <div class="inline-flex items-center gap-1 bg-[#1F8A70] text-white px-3 py-1 rounded-lg mt-3">
+                    ⭐ <span>4.6</span>
+                </div>
+
+                <p class="text-gray-800 mt-4 leading-relaxed">
+                     Industry mentor with practical experience. Helps students master concepts through
+projects, portfolio building, and career-focused learning. Suitable for learners aiming to gain
+job-ready skills.
+                </p>
+
+                <p class="font-semibold mt-3 text-[#7A4A2A]">
+                    Speak English and Tamil
+                </p>
+
+                <div class="flex flex-wrap gap-3 mt-5">
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        Figma
+                    </span>
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        Wireframing
+                    </span>
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        Prototyping
+                    </span>
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        UX Researcher
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="mt-12 flex flex-col md:flex-row justify-between items-center gap-6">
+
+            <div class="text-black">
+                <p class="font-semibold text-lg">
+                    Starting From
+                </p>
+
+                <h3 class="text-5xl font-light">
+                    $899/month
+                </h3>
+            </div>
+
+            <button class="bg-[#184F46] hover:bg-[#123C36] text-white font-semibold px-12 py-4 rounded-xl transition">
+                View Profile
+            </button>
+
+        </div>
+
+    </div>
+    <div class="bg-[#E9DFD0] rounded-2xl p-8 mentor-card" data-course="Python web Developer"
+     data-level="Beginner"
+     data-language="English and Tamil">
+
+        <div class="flex flex-col md:flex-row gap-6">
+            <div class="shrink-0">
+                <img
+                    src="images/mentor11.png"
+                    alt="mentor image"
+                    class="w-full max-w-[220px] h-auto aspect-square object-cover rounded-xl border-2 border-gray-700 mx-auto">
+            </div>
+            <div class="flex-1">
+
+                <h2 class="text-2xl md:text-4xl font-bold text-[#7A4A2A]">
+                    Tyler Sanders
+                </h2>
+
+                <p class="text-2xl text-[#8B5E3C]">
+                     Python Developer (Bootcamp)
+                </p>
+                <div class="inline-flex items-center gap-1 bg-[#1F8A70] text-white px-3 py-1 rounded-lg mt-3">
+                    ⭐ <span>4.5</span>
+                </div>
+
+                <p class="text-gray-800 mt-4 leading-relaxed">
+                     Industry mentor with practical experience. Helps students master concepts through
+projects, portfolio building, and career-focused learning. Suitable for learners aiming to gain
+job-ready skills.
+                </p>
+
+                <p class="font-semibold mt-3 text-[#7A4A2A]">
+                    Speak English and Tamil
+                </p>
+
+                <div class="flex flex-wrap gap-3 mt-5">
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        Python
+                    </span>
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        Django
+                    </span>
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        Flask
+                    </span>
+                        APIs
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        Automation
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="mt-12 flex flex-col md:flex-row justify-between items-center gap-6">
+
+            <div class="text-black">
+                <p class="font-semibold text-lg">
+                    Starting From
+                </p>
+
+                <h3 class="text-5xl font-light">
+                    $899/month
+                </h3>
+            </div>
+
+            <button class="bg-[#184F46] hover:bg-[#123C36] text-white font-semibold px-12 py-4 rounded-xl transition">
+                View Profile
+            </button>
+
+        </div>
+
+    </div>
+    <div class="bg-[#E9DFD0] rounded-2xl p-8 mentor-card" data-course="Python web Developer"
+     data-level="Intermediate"
+     data-language="English and Tamil">
+
+        <div class="flex flex-col md:flex-row gap-6">
+            <div class="shrink-0">
+                <img
+                    src="images/mentor12.png"
+                    alt="mentor image"
+                    class="w-full max-w-[220px] h-auto aspect-square object-cover rounded-xl border-2 border-gray-700 mx-auto">
+            </div>
+            <div class="flex-1">
+
+                <h2 class="text-2xl md:text-4xl font-bold text-[#7A4A2A]">
+                    Tyler Sanders
+                </h2>
+
+                <p class="text-2xl text-[#8B5E3C]">
+                     Python Developer (Bootcamp)
+                </p>
+                <div class="inline-flex items-center gap-1 bg-[#1F8A70] text-white px-3 py-1 rounded-lg mt-3">
+                    ⭐ <span>4.6</span>
+                </div>
+
+                <p class="text-gray-800 mt-4 leading-relaxed">
+                     Industry mentor with practical experience. Helps students master concepts through
+projects, portfolio building, and career-focused learning. Suitable for learners aiming to gain
+job-ready skills.
+                </p>
+
+                <p class="font-semibold mt-3 text-[#7A4A2A]">
+                    Speak English and Tamil
+                </p>
+
+                <div class="flex flex-wrap gap-3 mt-5">
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        Python
+                    </span>
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        Django
+                    </span>
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        Flask
+                    </span>
+                        APIs
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        Automation
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="mt-12 flex flex-col md:flex-row justify-between items-center gap-6">
+
+            <div class="text-black">
+                <p class="font-semibold text-lg">
+                    Starting From
+                </p>
+
+                <h3 class="text-5xl font-light">
+                    $899/month
+                </h3>
+            </div>
+
+            <button class="bg-[#184F46] hover:bg-[#123C36] text-white font-semibold px-12 py-4 rounded-xl transition">
+                View Profile
+            </button>
+
+        </div>
+
+    </div>
+    <div class="bg-[#E9DFD0] rounded-2xl p-8 mentor-card" data-course="Python web Developer"
+     data-level="Advanced"
+     data-language="English and Tamil">
+
+        <div class="flex flex-col md:flex-row gap-6">
+            <div class="shrink-0">
+                <img
+                    src="images/mentor13.png"
+                    alt="mentor image"
+                    class="w-full max-w-[220px] h-auto aspect-square object-cover rounded-xl border-2 border-gray-700 mx-auto">
+            </div>
+            <div class="flex-1">
+
+                <h2 class="text-2xl md:text-4xl font-bold text-[#7A4A2A]">
+                    Ron Danny
+                </h2>
+
+                <p class="text-2xl text-[#8B5E3C]">
+                     Python Developer (Bootcamp)
+                </p>
+                <div class="inline-flex items-center gap-1 bg-[#1F8A70] text-white px-3 py-1 rounded-lg mt-3">
+                    ⭐ <span>4.6</span>
+                </div>
+
+                <p class="text-gray-800 mt-4 leading-relaxed">
+                     Industry mentor with practical experience. Helps students master concepts through
+projects, portfolio building, and career-focused learning. Suitable for learners aiming to gain
+job-ready skills.
+                </p>
+
+                <p class="font-semibold mt-3 text-[#7A4A2A]">
+                    Speak English and Tamil
+                </p>
+
+                <div class="flex flex-wrap gap-3 mt-5">
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        Python
+                    </span>
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        Django
+                    </span>
+
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        Flask
+                    </span>
+                        APIs
+                    <span class="px-5 py-2 rounded-full bg-[#E8CDA6] text-[#7A4A2A] text-sm font-semibold">
+                        Automation
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="mt-12 flex flex-col md:flex-row justify-between items-center gap-6">
+
+            <div class="text-black">
+                <p class="font-semibold text-lg">
+                    Starting From
+                </p>
+
+                <h3 class="text-5xl font-light">
+                    $899/month
+                </h3>
+            </div>
+
+            <button class="bg-[#184F46] hover:bg-[#123C36] text-white font-semibold px-12 py-4 rounded-xl transition">
+                View Profile
+            </button>
+
+        </div>
+
+    </div>
+    
+        
+
+               
+</div>
+</div>
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+
+menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+
+    if (mobileMenu.classList.contains("hidden")) {
+        menuBtn.innerHTML = "☰";
+    } else {
+        menuBtn.innerHTML = "✕";
+    }
+});
+
+
+const search = document.getElementById("search");
+const mentorCards = document.querySelectorAll(".mentor-card");
+
+const courseFilters = document.querySelectorAll(".course-filter input");
+const levelFilters = document.querySelectorAll(".level-filter input");
+const languageFilters = document.querySelectorAll(".language-filter input");
+
+search.addEventListener("keyup", filterMentors);
+
+document.querySelectorAll("input[type='checkbox']")
+.forEach(box => {
+    box.addEventListener("change", filterMentors);
+});
+
+function filterMentors() {
+
+    const searchText = search.value.toLowerCase();
+
+    let selectedCourses = [];
+    let selectedLevels = [];
+    let selectedLanguages = [];
+
+    courseFilters.forEach(box => {
+        if (box.checked) {
+            selectedCourses.push(box.value);
+        }
+    });
+
+    levelFilters.forEach(box => {
+        if (box.checked) {
+            selectedLevels.push(box.value);
+        }
+    });
+
+    languageFilters.forEach(box => {
+        if (box.checked) {
+            selectedLanguages.push(box.value);
+        }
+    });
+
+    mentorCards.forEach(card => {
+
+        const mentorName = card.querySelector("h2")
+            .textContent.toLowerCase();
+
+        const course = card.dataset.course || "";
+        const level = card.dataset.level || "";
+        const language = card.dataset.language || "";
+
+        const searchMatch =
+            mentorName.includes(searchText);
+
+        const courseMatch =
+            selectedCourses.length === 0 ||
+            selectedCourses.includes(course);
+
+        const levelMatch =
+            selectedLevels.length === 0 ||
+            selectedLevels.includes(level);
+
+        const languageMatch =
+            selectedLanguages.length === 0 ||
+            selectedLanguages.some(lang =>
+                language.toLowerCase().includes(lang.toLowerCase())
+            );
+
+        if (
+            searchMatch &&
+            courseMatch &&
+            levelMatch &&
+            languageMatch
+        ) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+    });
+}
+
+</script>
+</body>
+</html>
