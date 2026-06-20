@@ -1,6 +1,4 @@
-/* ===========================
-   RESET & BASE
-=========================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +10,8 @@ body {
     background-color: #000000;
     color: #ffffff;
     min-height: 100vh;
-    padding: 24px 40px;
+    
+    
 }
 
 img {
@@ -29,9 +28,7 @@ a:hover {
     text-decoration: underline;
 }
 
-/* ===========================
-   NAVBAR
-=========================== */
+
 .navbar {
     display: flex;
     align-items: center;
@@ -95,9 +92,7 @@ a:hover {
     font-size: 17px;
 }
 
-/* ===========================
-   MAIN CONTAINER (sidebar + content)
-=========================== */
+
 .container {
     display: flex;
     flex-direction: row;
@@ -152,16 +147,12 @@ a:hover {
     accent-color: white;
 }
 
-/* ===========================
-   RIGHT CONTENT
-=========================== */
+
 .content {
     flex: 1;
 }
 
-/* ===========================
-   SEARCH BAR
-=========================== */
+
 .search-wrapper {
     position: relative;
     width: 100%;
@@ -341,10 +332,44 @@ a:hover {
 .btn-view:hover {
     background-color: #123C36;
 }
+.footer {
+    background-color: #1A4C44;
+    text-align: center;
+    margin-right: 0;
+    margin-top:70px;
 
-/* ===========================
-   RESPONSIVE - TABLET (900px)
-=========================== */
+    
+}
+
+.footer__logo {
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+.footer__brand{
+
+}
+.footer__brand p {
+    color: var(--text-muted);
+    max-width: 500px;
+    margin: 0 auto 30px;
+}
+.footer__brand img{
+    width: 200px;
+        overflow-clip-margin: none;
+        display: inline-block;
+        justify-content: center;   
+}
+.footer__copy {
+    font-size: 13px;
+    color: var(--text-muted);
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 20px;
+}
+
+
+
 @media (max-width: 900px) {
 
     body {
@@ -392,9 +417,7 @@ a:hover {
     }
 }
 
-/* ===========================
-   RESPONSIVE - MOBILE (600px)
-=========================== */
+
 @media (max-width: 600px) {
 
     .navbar__title {
