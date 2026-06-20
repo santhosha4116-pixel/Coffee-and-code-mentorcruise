@@ -1,6 +1,4 @@
-/* ===========================
-   RESET & BASE
-=========================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -30,9 +28,7 @@ a:hover {
     text-decoration: underline;
 }
 
-/* ===========================
-   NAVBAR
-=========================== */
+
 .navbar {
     display: flex;
     align-items: center;
@@ -96,9 +92,7 @@ a:hover {
     font-size: 17px;
 }
 
-/* ===========================
-   MAIN CONTAINER (sidebar + content)
-=========================== */
+
 .container {
     display: flex;
     flex-direction: row;
@@ -153,16 +147,12 @@ a:hover {
     accent-color: white;
 }
 
-/* ===========================
-   RIGHT CONTENT
-=========================== */
+
 .content {
     flex: 1;
 }
 
-/* ===========================
-   SEARCH BAR
-=========================== */
+
 .search-wrapper {
     position: relative;
     width: 100%;
@@ -379,9 +369,7 @@ a:hover {
 }
 
 
-/* ===========================
-   RESPONSIVE - TABLET (900px)
-=========================== */
+
 @media (max-width: 900px) {
 
     body {
@@ -429,9 +417,7 @@ a:hover {
     }
 }
 
-/* ===========================
-   RESPONSIVE - MOBILE (600px)
-=========================== */
+
 @media (max-width: 600px) {
 
     .navbar__title {

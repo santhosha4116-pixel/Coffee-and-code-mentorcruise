@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MentorCruise — Signup</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Signup.html">
+</head>
+<body>
+
+
+
+ <header>
+        <nav class="navbar">
+            <div class="navbar__brand">
+                <img src="himg/logo.png" class="navbar__logo" alt="logo">
+                <h1 class="navbar__title">MentorCruise</h1>
+            </div>
+            <ul class="navbar__links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="course.html">Course</a></li>
+                <li><a href="about_us.html">Signup</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
+            </ul>
+            <button class="hamburger" id="menuBtn">☰</button>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="course.html">Course</a></li>
+                <li><a href="#about">Signup</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </header>
+    <!-- HEADING -->
+    <h1 class="heading">Welcome To MentorCruise</h1>
+
+    <!-- FORM CARD -->
+    <div class="card">
+      <form id="signupForm" novalidate>
+
+        <!-- Name -->
+        <div class="form-group">
+          <label for="firstName">Name:</label>
+          <input type="text" id="firstName" placeholder="Enter your first name">
+          <span class="error" id="firstNameError"></span>
+        </div>
+
+        <!-- Last Name -->
+        <div class="form-group">
+          <label for="lastName">Last Name:</label>
+          <input type="text" id="lastName" placeholder="Enter your last name">
+          <span class="error" id="lastNameError"></span>
+        </div>
+
+        <!-- Gmail -->
+        <div class="form-group">
+          <label for="email">Gmail:</label>
+          <input type="email" id="email" placeholder="you@gmail.com">
+          <span class="error" id="emailError"></span>
+        </div>
+
+        <!-- Phone -->
+        <div class="form-group">
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" placeholder="Enter 10-digit number">
+          <span class="error" id="phoneError"></span>
+        </div>
+
+        <!-- Submit -->
+        <div class="form-submit">
+          <button type="submit" class="btn-signup btn-disabled" id="signupBtn" disabled>Signup</button>
+        </div>
+
+      </form>
+    </div>
+
+  </div>
+<footer class="footer">
+    <div class="footer__brand">
+         <img src="himg/PROJECT  logo.png">
+        <p>Your trusted source to find highly-vetted mentors & industry professionals to move your career ahead.</p>
+    </div>
+    <p class="footer__copy">© 2026 MentorCruise. All rights reserved.</p>
+</footer>
+  <script src="Signup.html"></script>
+</body>
+</html>

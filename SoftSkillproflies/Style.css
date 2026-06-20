@@ -1,6 +1,4 @@
-/* ===========================
-   TOKENS
-=========================== */
+
 :root {
     --forest-dark: #0c1f1a;
     --forest: #15332b;
@@ -463,9 +461,7 @@ a {
     font-size: 13px;
 }
 
-/* ===========================
-   ABOUT
-=========================== */
+
 .about, .soft-skills, .reviews, .contact {
     max-width: 1300px;
     margin: 0 auto;
@@ -492,9 +488,7 @@ a {
     margin-bottom: 8px;
 }
 
-/* ===========================
-   SOFT SKILLS
-=========================== */
+
 .soft-skills__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -523,9 +517,7 @@ a {
     color: var(--text-muted);
 }
 
-/* ===========================
-   REVIEWS
-=========================== */
+
 .review {
     background-color: var(--forest);
     padding: 28px;
@@ -550,9 +542,7 @@ a {
     color: var(--text-light);
 }
 
-/* ===========================
-   CONTACT
-=========================== */
+
 .contact p {
     color: var(--text-muted);
     margin-bottom: 24px;
@@ -599,9 +589,7 @@ a {
     max-width: 220px;
 }
 
-/* ===========================
-   FOOTER
-=========================== */
+
 .footer {
     background-color: var(--forest);
     padding: 50px 40px;
@@ -636,9 +624,7 @@ a {
     padding-top: 20px;
 }
 
-/* ===========================
-   RESPONSIVE - TABLET (900px)
-=========================== */
+
 @media (max-width: 900px) {
 
     .profile {
