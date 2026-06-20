@@ -1,4 +1,3 @@
-
 var hamburger = document.getElementById("hamburger");
 var mobileMenu = document.getElementById("mobileMenu");
 
