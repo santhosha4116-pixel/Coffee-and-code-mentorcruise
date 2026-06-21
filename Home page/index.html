@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MentorCruise - Choose your Mentor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <nav class="navbar">
+            <div class="navbar__brand">
+                <img src="himg/logo.png" class="navbar__logo" alt="logo">
+                <h1 class="navbar__title">MentorCruise</h1>
+            </div>
+            <ul class="navbar__links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Course\course.html">Course</a></li>
+                <li><a href="Signup.html">Signup</a></li>
+                <li><a href="ContactUs\src\contact.html">Contact Us</a></li>
+            </ul>
+            <button class="hamburger" id="menuBtn">☰</button>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+           <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Course\course.html">Course</a></li>
+                <li><a href="Signup.html">Signup</a></li>
+                <li><a href="ContactUs\src\contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="info">
+        <img src="himg/27.png">
+        <h1>Connect With the World's Greatest Mentors</h1>
+
+        <h3>Profit from short response times and guaranteed video calls from the
+            top 1% on MentorCruise. For when you need that extra bit of support.
+        </h3>
+    </div>
+    <div class="info">
+        <img src="himg/28.png">
+        <h1>Top-rated expert mentors</h1>
+        <h3>Profit from short response times and guaranteed video calls from the top 1% onMentorCruise. For when you
+            need that extra bit of support</h3>
+    </div>
+    <footer class="footer">
+        <div class="footer__brand">
+            <img src="himg/PROJECT  logo.png">
+            <p>Your trusted source to find highly-vetted mentors & industry professionals to move your career ahead.</p>
+        </div>
+        <p class="footer__copy">© 2026 MentorCruise. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
+<script>
+    var menuBtn = document.getElementById("menuBtn");
+    var mobileMenu = document.getElementById("mobileMenu");
+
+    menuBtn.addEventListener("click", function () {
+        mobileMenu.classList.toggle("open");
+
+        if (mobileMenu.classList.contains("open")) {
+            menuBtn.innerHTML = "✕";
+        } else {
+            menuBtn.innerHTML = "☰";
+        }
+    });
+</script>

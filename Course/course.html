@@ -6,44 +6,36 @@
     <title>MentorCruise</title>
     <link rel="icon" href="./Assest/images/images.jpeg" />
     <link rel="stylesheet" href="Course.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Poppins&display=swap"
-      rel="stylesheet"
-    />
   </head>
 
   <body>
     <!--Navbar-->
 
-<header class="nav">
-    <div class="nav__inner">
-        <a href="#" class="nav__logo">
-            <img src="PROJECT  logo.png">
-        </a>
-        <nav class="nav__links">
-            <a href="#home">Home</a>
-            <a href="#course">Course</a>
-            <a href="#about">About</a>
-            <a href="#contactUs">Contact Us</a>
+<header>
+        <nav class="navbar">
+            <div class="navbar__brand">
+                <img src="logo.png" class="navbar__logo" alt="logo">
+                <h1 class="navbar__title">MentorCruise</h1>
+            </div>
+            <ul class="navbar__links">
+                <li><a href="Home page\index.html">Home</a></li>
+                <li><a href="Course\course.html">Course</a></li>
+                <li><a href="Home page\Signup.html">Signup</a></li>
+                <li><a href="ContactUs\src\contact.html">Contact Us</a></li>
+            </ul>
+            <button class="hamburger" id="menuBtn">☰</button>
         </nav>
-        <div class="nav__hamburger" id="hamburger"><h3>☰</h3></div>
-    </div>
-    <nav class="nav__mobile" id="mobileMenu">
-        <a href="#home">Home</a>
-        <a href="#course">Course</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact Us</a>
-    </nav>
-</header>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="Home page\index.html">Home</a></li>
+                <li><a href="Course\course.html">Course</a></li>
+                <li><a href="Signup.html">Signup</a></li>
+                <li><a href="ContactUs\src\contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </header>
     <!--Main Section-->
 
     <main>
@@ -59,7 +51,7 @@
           <li>UX/UI Design</li>
           <li>AWS & Cloud Management</li>
         </ul>
-        <a href="technicalsoftskill\technical.html"> View Course</a>
+        <a href="technical.html"> View Course</a>
          
        
       </section>
@@ -77,7 +69,7 @@
           <li>Organization & Work Ethic</li>
         </ul>
 
-        <a href="SoftSkillproflies\Soft Skill page.html"> View Course</a>
+        <a href="Soft Skill page.html"> View Course</a>
          
       </section>
     </main>
